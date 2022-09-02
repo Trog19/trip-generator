@@ -1,7 +1,5 @@
-from operator import truediv
 import random
-from secrets import choice
-from tkinter.messagebox import NO, YES
+
 
 
 destinations = ['Bozeman', 'Tampa', 'Philadelphia']
@@ -37,19 +35,27 @@ def restaurant(restaurants):
 
 
 
-# def day_trips(day_trip):
-#     fun=(random.choice(day_trip))
-#     return fun
+def day_trips(day_trip):
+    fun=(random.choice(day_trip))
+    print (f'The chosen day trip is {fun}')
+    confirm = input (f'If you are excited about this activity enter Yes, if you would like to see another enter No')
+    if confirm == 'No':
+        print (day_trips(day_trip))
+    if confirm =='Yes':
+        print (f'Your chosen activity is {fun}!')
+    return fun
 
-# chosen_activity=(random.choice(day_trip))
-# print (f'Your day trip activity is {chosen_activity}!') 
 
-# def transports(transport):
-#     travel=(random.choice(transport))
-#     return travel
 
-# chosen_transport=(random.choice(transport))
-# print(f'Your chosen transport is {chosen_transport}!')
+def transports(transport):
+    travel=(random.choice(transport))
+    print (f'The chosen method of transport is {travel}')
+    confirm = input (f'IF you like this method of travel enter Yes, to see another travel option enter No.')
+    if confirm == 'No':
+        print (transports(transport))
+    if confirm == 'Yes':
+        print (f'Your chosen method of transport is {travel}!')
+    return travel
 
 # def users_answer(answer):
 #     user_input=('Please confirm choice.')
