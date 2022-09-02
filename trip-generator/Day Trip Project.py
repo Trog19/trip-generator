@@ -6,36 +6,35 @@ from tkinter.messagebox import NO, YES
 
 destinations = ['Bozeman', 'Tampa', 'Philadelphia']
 
-# restaurants = ['Rib and Chop', 'Blue Buddah', 'River House']
+restaurants = ['Rib and Chop', 'Blue Buddah', 'River House']
 
-# day_trip = ['Hiking', 'Fishing', 'Skiing']
+day_trip = ['Hiking', 'Fishing', 'Skiing']
 
-# transport = ['Trains', 'Plane', 'Automobile']
+transport = ['Trains', 'Plane', 'Automobile']
 
 
 
 def destination(destinations):
     city=(random.choice(destinations))
+    print (f'The chosen City is {city}!')
+    confirm = input(f'If you are happy with this choice enter Yes, to see another city enter No')
+    if confirm == 'No':
+        print (destination(destinations))
+    if confirm == 'Yes':
+        print(f'Your chosen City is {city}')
     return city
 
-Confirm= ['Yes']
-user_input= input('Please confirm choice! ')
-city= chosen_city=destination(destinations)
 
+def restaurant(restaurants):
+    dining=(random.choice(restaurants))
+    print (f'The chosen restaurant is {dining}')
+    confirm = input (f'If you are happy with this restaurant enter Yes, to see another option enter No')
+    if confirm == 'No':
+        print (restaurant(restaurants))
+    if confirm == 'Yes':
+        print(f'Your restaurant is{dining}')
+    return dining   
 
-chosen_city=destination(destinations)
-print (f'The chosen City is {chosen_city}!')
-if Confirm == 'No':
-    print (chosen_city=destination(destinations))
-if Confirm == 'Yes':
-    print(f'Your chosen City is {chosen_city}')
-
-# def restaurant(restaurants):
-#     dining=(random.choice(restaurants))
-#     return dining   
-
-# chosen_restaurant=restaurant(restaurants)
-# print (f'Your chosen Restaurant is {chosen_restaurant}!')
 
 
 # def day_trips(day_trip):
